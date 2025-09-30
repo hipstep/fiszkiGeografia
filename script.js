@@ -138,17 +138,17 @@ function pokaz(id)
     titleContent.innerHTML = tab[kolejnosc[id]];
     if(kolejnosc[id] < 50)
     {
-        mapContent.innerHTML = "<img src='img/mapa.png'>";
+        mapContent.innerHTML = "<img src='mapa.png'>";
     }
     else
     {
-        mapContent.innerHTML = "<img src='img/mapaWodna.png'>";
+        mapContent.innerHTML = "<img src='mapaWodna.png'>";
     }
 }
 pokaz(idWszystko)
 
 showButton.addEventListener("click", function(){
-    mapContent.innerHTML = `<img src='img/${kolejnosc[idWszystko]}.png'>`;
+    mapContent.innerHTML = `<img src='${kolejnosc[idWszystko]}.png'>`;
 });
 
 nextButton.addEventListener("click", function(){
@@ -159,4 +159,5 @@ nextButton.addEventListener("click", function(){
 previousButton.addEventListener("click", function(){
     idWszystko--;
     pokaz(idWszystko);
+
 });
