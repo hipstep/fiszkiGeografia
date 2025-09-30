@@ -142,7 +142,14 @@ function pokaz(id)
     }
     else
     {
-        mapContent.innerHTML = "<img src='mapaWodna.png'>";
+        if(kolejnosc[id] <75)
+        {
+            mapContent.innerHTML = "<img src='mapaWodna.png'>";
+        }
+        else
+        {
+            mapContent.innerHTML = "<img src='mapaJeziora.png'>";
+        }
     }
 }
 pokaz(idWszystko)
@@ -161,3 +168,4 @@ previousButton.addEventListener("click", function(){
     pokaz(idWszystko);
 
 });
+
